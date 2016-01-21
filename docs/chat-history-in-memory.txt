@@ -1,0 +1,49 @@
+message:
+{
+	'id': messageId, 
+	'content': message, 
+	'from': from, 
+	'to': to, 
+	'time': messageTime, 
+	'state': messageState.CREATED,
+	'createdDate': new Date().getTime(),
+	'sentByClientDate': 0,
+	'receivedByServerDate': 0,
+	'sentByServerDate': 0,
+	'receivedDate': 0,
+	'readDate': 0,
+}
+
+[
+	{
+		"member": 1, 
+		"messages": [
+			{
+				"from": 2,
+				"messages": [
+					{"id": 27272, "content": "hai...", "from": 2, "to": 1},
+					{"id": 27273, "content": "hai juga", "from": 1, "to": 2}
+				]
+			},
+			{
+				"from": 3,
+				"messages": [
+					{},
+					{},
+				]
+			}
+		]
+	},
+	{
+		"member": 2, 
+		"messages": [
+			{
+				"from": 1,
+				"messages": [
+					{"id": 27272, "content": "hai...", "from": 2, "to": 1},
+					{"id": 27273, "content": "hai juga", "from": 1, "to": 2}
+				]
+			}
+		]
+	}
+]
