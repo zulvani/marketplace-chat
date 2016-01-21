@@ -135,9 +135,9 @@ var getUnsentMessages = function(member, from){
 	return null;
 }
 
-// app.get('/seller', function(req, res){
-// 	res.sendFile(__dirname + '/static/seller.html');
-// });
+app.get('/ex', function(req, res){
+	res.sendFile(__dirname + '/static/ex.html');
+});
 
 // app.get('/buyer', function(req, res){
 // 	res.sendFile(__dirname + '/static/buyer.html');
