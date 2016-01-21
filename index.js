@@ -21,7 +21,7 @@ var entityType = {
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var host = 'https://evo-chat.herokuapp.com:14191';
+var host = 'https://evo-chat-persist.herokuapp.com:14191';
 var ioClient = require('socket.io-client')(host);
 
 var sockets = [];
