@@ -16,7 +16,8 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 		<script src="../libs/mchat.js"></script>
 
 		<script>
-		var socket = new io('http://localhost:3000');
+		var host = 'https://evo-chat.herokuapp.com:3000';
+		var socket = new io(host);
 		var currentBuyer = null;
 		var buyers = [];
 		var seller;
