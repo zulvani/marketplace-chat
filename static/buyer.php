@@ -22,7 +22,8 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 		<script src="../libs/mchat.js"></script>
 
 		<script>
-		var socket = new io('http://localhost:3000');
+		var host = 'https://evo-chat.herokuapp.com';
+		var socket = new io(host);
 
 		$(document).ready(function(){
 			var product = {'id': <?=$productId?>, 'title': '<?=$productName?>'};
@@ -40,10 +41,12 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 				if(online){
 					$('#seller').text('Online');
 					$('#seller-online-wrapper').show();
+					$('#open-chat').show();
 				}
 				else{
 					$('#seller').text('Offline');
 					$('#seller-online-wrapper').hide();
+					$('#open-chat').hide();
 				}
 			});
 
@@ -117,6 +120,7 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 			$('#open-chat').click(function(){
 				socket.emit('openChat', seller, buyer, product);
 				$('#chat-wrapper').show();
+				$('#open-chat').hide();
 				$('#seller-identity > p').text(seller.name);
 			});
 
@@ -267,6 +271,10 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 
 			#send-message{
 				padding: 10px 10px;
+			}
+
+			#open-chat{
+				display: none
 			}
 		</style>
 	</head>

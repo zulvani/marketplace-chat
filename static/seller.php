@@ -221,10 +221,8 @@ $sellerName = isset($_GET['sellerName']) ? $_GET['sellerName'] : "Seller - " . $
 					}
 				}
 
-				if(currentBuyer != null){
-					var elem = document.getElementById('chat-history-' + currentBuyer.id);
-	  				elem.scrollTop = elem.scrollHeight;
-	  			}
+				var elem = document.getElementById('chat-history-' + message.from.id);
+	  			elem.scrollTop = elem.scrollHeight;
 
 	  			var ll = 8;
 	  			var mWidth = ll * message.content.length;
