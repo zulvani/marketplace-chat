@@ -32,3 +32,13 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# express app generator result
+mchat-server
+mchat-server/*
+mchat-server/**
+
+# deploy script
+deploy
+deploy/*
+deploy/**
